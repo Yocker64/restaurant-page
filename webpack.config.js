@@ -21,6 +21,10 @@ module.exports = {
   ],
   module: {
     rules: [
+        {
+            test: /\.js$/,
+            type: 'javascript/auto', // 👈 tells Webpack to treat .js as module
+          },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
