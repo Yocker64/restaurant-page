@@ -1,7 +1,8 @@
-import myImage from "./img/landing-page-background.jpg";
+import myImage from "./img/background-main.jpg";
+import './styles/fontsAndReset.css';
+import './styles/styles.css';
 
-const img = document.createElement("img");
-img.src = myImage;
-img.alt = 'My Image';
-img.width = 300;
-document.body.appendChild(img);
+
+document.body.style.backgroundImage = `url(${myImage})`;
+document.body.style.backgroundSize = "cover";           // 🔥 Makes it cover the whole screen
+document.body.style.backgroundRepeat = "no-repeat";      // 🔥 Prevents tiling/repeating
