@@ -59,7 +59,8 @@ button:hover{
     height: 75vh;
 }
 
-#chefImage{
+#chefImage, 
+#locationImg{
     height: 40vh;
 }
 
@@ -71,4 +72,30 @@ button:hover{
     justify-content: space-between;
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+#menu{
+    padding: 40px 120px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 32px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+.option>p{
+    color: white;
+    transition: 0.4s ease;
+}
+
+.option>p:hover{
+    font-size: 20px;
+    color: gold;
 }
