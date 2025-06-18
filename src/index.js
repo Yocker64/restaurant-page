@@ -1,9 +1,14 @@
 import myImage from "./img/background-main.jpg";
 import chefPic from "./img/chef.jpeg";
-import pizzaPic from "./img/pizza.jpeg";
 import locationPic from "./img/restaurant-location.png";
 import './styles/fontsAndReset.css';
 import './styles/styles.css';
+import hawaian from "./img/hawaii.jpg";
+import pepp from "./img/pepp.jpeg";
+import margarita from "./img/pizza-margarita.jpg";
+import cuatroquesos from "./img/pizza-cuatro-quesos.jpg";
+
+
 
 const content = document.getElementById("content");
 
@@ -32,9 +37,9 @@ function loadHome() {
     content.appendChild(desc);
 }
 
-function createOption( name) {
+function createOption( name,src) {
     let pizzaImg = document.createElement("img");
-    pizzaImg.src = pizzaPic;
+    pizzaImg.src = src;
     let option = document.createElement("div");
     let desc = document.createElement("p");
     desc.textContent=name;
@@ -52,9 +57,11 @@ function loadMenu() {
     content.innerHTML = ""; // Clear previous content if needed
     let menu = document.createElement("div");
     menu.setAttribute("id","menu");
-    for (let i = 0; i < 4; i++) {
-        menu.appendChild(createOption("Option " +(i+1)))
-    }
+        menu.appendChild(createOption("Margarita",margarita));
+        menu.appendChild(createOption("4 Cheese",cuatroquesos));
+        menu.appendChild(createOption("Pepperoni",pepp));
+        menu.appendChild(createOption("Hawaiian",hawaian));
+    
     content.appendChild(menu);
 
 }
